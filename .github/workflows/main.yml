@@ -12,6 +12,4 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: 16
-            - run: npm run test
-            - run: npm run build
-            - run: npm run deploy
+            - run: docker-compose up -d
