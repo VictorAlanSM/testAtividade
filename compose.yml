@@ -1,0 +1,71 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: greenway_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+      - ./scripts:/docker-entrypoint-initdb.d
+    networks:
+      - app_network
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/
+    networks:
+      - app_network
+
+  greenway-sd:
+    container_name: greenway-sd
+    build: ./greenway-sd
+    ports:
+      - "5050:5050"
+    networks:
+      - app_network
+
+  greenway-gateway:
+    container_name: greenway-gateway
+    build: ./greenway-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - greenway-sd
+    networks:
+      - app_network
+
+  greenway-mail:
+    container_name: greenway-mail
+    build: ./greenway-mail
+    depends_on:
+      - rabbitmq
+      - greenway-sd
+    networks:
+      - app_network
+
+  greenway-main:
+    container_name: greenway-main
+    build: ./greenway-main
+    depends_on:
+      - postgres
+      - rabbitmq
+      - greenway-sd
+      - greenway-gateway
+    networks:
+      - app_network
+
+volumes:
+  rabbitmq-data: { }
+
+networks:
+  app_network:
+    driver: bridge
