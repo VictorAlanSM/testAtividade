@@ -13,6 +13,7 @@
     ```bash 
     docker-compose up -d
     ```
+    
 - Após subir os serviços, as aplicações irão iniciar e será criado um usuario admin no banco de dados, ele será utilizado para realizar o primeiro login na aplicação e para criar um novo usuario com a role user para testes.
   **importante criar o seu usuario informando um email válido para que possa verificar o envio do email de notificação**
 
