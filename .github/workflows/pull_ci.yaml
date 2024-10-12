@@ -4,7 +4,7 @@ on:
 #   especificando para rodar o workflow quando for realizado um pull request no repositório
     pull_request:
         branches: "*"
- 
+
 jobs:
     build:
         runs-on: ubuntu-latest
