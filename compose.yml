@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: postgres
-    image: postgres
+    image: postgres:17-alpine
     ports:
       - "5432:5432"
     environment:
@@ -9,7 +9,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data
       - ./scripts:/docker-entrypoint-initdb.d
     networks:
       - app_network

@@ -1,2 +1,2 @@
-CREATE DATABASE greenway-db;
-GRANT ALL PRIVILEGES ON DATABASE greenway-db TO postgres;
+CREATE DATABASE greenway_db;
+GRANT ALL PRIVILEGES ON DATABASE greenway_db TO postgres;
