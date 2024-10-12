@@ -15,3 +15,7 @@ jobs:
             with:
                 distribution: 'temurin'
                 java-version: '21'
+        -   name: Build
+            uses: docker-compose up -d@v6
+            with:
+                push: false        
