@@ -17,7 +17,7 @@
 - Após subir os serviços, as aplicações irão iniciar e será criado um usuario admin no banco de dados, ele será utilizado para realizar o primeiro login na aplicação e para criar um novo usuario com a role user para testes.
   **importante criar o seu usuario informando um email válido para que possa verificar o envio do email de notificação**
 
-    
+  
 - Na mesma pasta irei deixar o arquivo "**_insomnia-trabalho-fiap.json_**" com as rotas da aplicação, basta importar o arquivo no insomnia e utilizar as rotas para testar a aplicação.
 
 - Verifique nas rotas os ids utilizados nas requisições para garantir que os dados estão sendo passados corretamente para evitar erros.
