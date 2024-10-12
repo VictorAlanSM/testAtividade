@@ -3,10 +3,10 @@ name: CI / CD
 on:
     push:
         branches: "main"
- 
-env:
-  IMAGE_NAME: simple-api-java
-  AZURE_WEBAPP_NAME: simple-api-java
+
+# env:
+#   IMAGE_NAME: xpto
+#   AZURE_WEBAPP_NAME: xpto
  
 jobs:
     build:
