@@ -3,7 +3,8 @@ name: Push Continuous Integration
 on:
 #   especificando para rodar o workflow quando for realizado um push no repositório
     push:
-        branches: "*"
+        branches: 
+            - "*"
 jobs:
     build:
         runs-on: ubuntu-latest
