@@ -21,4 +21,4 @@ jobs:
               distribution: 'temurin'  
               java-version: '21'
         -   name: Unit Tests
-            run: mvn clean package
+            run: docker-compose up -d
