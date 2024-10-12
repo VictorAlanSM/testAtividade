@@ -1,12 +1,9 @@
-name: CI / CD
+name: Push Continuous Integration
 
 on:
+#   especificando para rodar o workflow quando for realizado um push no repositório
     push:
-        branches: "main"
-
-# env:
-#   IMAGE_NAME: xpto
-#   AZURE_WEBAPP_NAME: xpto
+        branches: "*"
  
 jobs:
     build:
