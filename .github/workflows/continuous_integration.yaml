@@ -12,14 +12,16 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:             
+#   (clona) o repositório do GitHub para o $GITHUB_WORKSPACE, permitindo que seu fluxo de trabalho acesse e trabalhe com o código        
         -   name: Git Checkout 
             uses: actions/checkout@v4 
- 
+# Configura o Java para o GitHub Actions 
         -   name: Setup Java SDK 
             uses: actions/setup-java@v4 
             with: 
               distribution: 'temurin'  
               java-version: '21'
+#   Realiza os testes unitários no arquivo principal do código
         -   name: Unit Tests
             run: |
                 cd greenway-main
