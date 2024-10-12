@@ -20,7 +20,6 @@
     
 - Na mesma pasta irei deixar o arquivo "**_insomnia-trabalho-fiap.json_**" com as rotas da aplicação, basta importar o arquivo no insomnia e utilizar as rotas para testar a aplicação.
 
-
 - Verifique nas rotas os ids utilizados nas requisições para garantir que os dados estão sendo passados corretamente para evitar erros.
 
 - Para conectar no banco de dados localmente basta cadastrar a conexão no DBeaver com as seguintes informações:
