@@ -1,7 +1,7 @@
 name: Push Continuous Integration
 
 on:
-#   especificando para rodar o workflow quando for realizado um push no repositório
+#   especificando para rodar o workflow quando for realizado um pull request no repositório
     push:
 jobs:
     build:
